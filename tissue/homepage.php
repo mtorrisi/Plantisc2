@@ -3,14 +3,14 @@ session_start();
 ?>
 <?php
 $userid = $_SESSION['userid'];
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password=""; // Mysql password 
-$db_name="tissue"; // Database name 
+$host="localhost"; // Host name
+$username="tissue"; // Mysql username
+$password=""; // Mysql password
+$db_name="tissue"; // Database name
 $tbl_name="user"; // Table name
 
 
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
+mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 $sql="SELECT names FROM $tbl_name WHERE userid='$userid'";
 $result=mysql_query($sql);
@@ -53,14 +53,14 @@ $names = strtoupper(stripslashes($names));
       </tr>
        <tr>
         <td>
-		
+
 	</tr>
-	 
+
    </table>
 
 <div id="content">
 
-<align = "centre"><img src=" http://localhost/tissue/images1/content.jpg" align="centre" />	
+<align = "centre"><img src="images1/content.jpg" align="centre" />	
 </div> <!-- end #content -->
 <?php include('includes/footer.php'); ?>
 </div> <!-- End #wrapper -->

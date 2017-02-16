@@ -1,6 +1,6 @@
 <?php
 
-mysql_connect('localhost', 'root', '');
+mysql_connect('localhost', 'tissue', 'tissue');
 mysql_select_db('tissue');
 
 $sql1 = mysql_query("CREATE TABLE `kinintype` (
@@ -10,7 +10,7 @@ $sql1 = mysql_query("CREATE TABLE `kinintype` (
   KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;");
 
-$sql1 = mysql_query("INSERT INTO `kinintype` (`id`, `kinintype`) VALUES 
+$sql1 = mysql_query("INSERT INTO `kinintype` (`id`, `kinintype`) VALUES
 (1, 'KINETIN'),
 (2, 'BAP')");
 
@@ -29,7 +29,7 @@ $sql2 = mysql_query("CREATE TABLE `output` (
 
 
 
-$sq09 = mysql_query("INSERT INTO `kinintype` (`id`, `kinintype`) VALUES 
+$sq09 = mysql_query("INSERT INTO `kinintype` (`id`, `kinintype`) VALUES
 (1, 'KINETIN'),
 (2, 'BAP')");
 
@@ -40,7 +40,7 @@ $sql4 = mysql_query("CREATE TABLE `treatment` (
   KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=3") ;
 
-$sql5 = mysql_query("INSERT INTO `treatment` (`id`, `treatment`) VALUES 
+$sql5 = mysql_query("INSERT INTO `treatment` (`id`, `treatment`) VALUES
 (1, 'AE'),
 (2, 'SH')");
 
@@ -52,7 +52,7 @@ $sql6 = mysql_query("CREATE TABLE `type` (
   KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=5");
 
-$sql7 = mysql_query("INSERT INTO `type` (`id`, `type`) VALUES 
+$sql7 = mysql_query("INSERT INTO `type` (`id`, `type`) VALUES
 (1, 'SHOOT'),
 (2, 'LEAF'),
 (3, 'BUD'),
@@ -73,7 +73,7 @@ $sql8 = mysql_query("CREATE TABLE `upload` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1");
 
 
-$sql9 = mysql_query("INSERT INTO `upload` (`userid`, `auxin`, `auxinname`, `cytokinin`, `cytokininname`, `response`, `treatment`, `type`, `fileid`, `contact`) VALUES 
+$sql9 = mysql_query("INSERT INTO `upload` (`userid`, `auxin`, `auxinname`, `cytokinin`, `cytokininname`, `response`, `treatment`, `type`, `fileid`, `contact`) VALUES
 (1, '0', 'NAA', '0', 'BAP', '1.00', 'AE', 'BUD', 1, '08064356543'),
 (1, '0', 'NAA', '2', 'BAP', '2.80', 'AE', 'BUD', 1, '08064356543'),
 (1, '0', 'NAA', '4', 'BAP', '2.90', 'AE', 'BUD', 1, '08064356543'),
@@ -384,7 +384,7 @@ $sql11 = mysql_query("CREATE TABLE `user` (
   PRIMARY KEY  (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1");
 
-$sq03 = mysql_query("INSERT INTO `user` (`userid`, `names`, `username`, `password`, `contact`) VALUES 
+$sq03 = mysql_query("INSERT INTO `user` (`userid`, `names`, `username`, `password`, `contact`) VALUES
 ('1', 'Ikeokwu John Nwanne', 'ike', '1234', '08023456643')");
 
 ?>

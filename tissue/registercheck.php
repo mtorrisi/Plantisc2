@@ -1,14 +1,14 @@
 <?php
 define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_USERNAME', 'tissue');
+define('DB_PASSWORD', 'tissue');
 define('DB_DATABASE', 'tissue');
 $connection = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
-// username and password sent from form 
-$names=$_POST['names']; 
-$username=$_POST['username']; 
-$password=$_POST['password']; 
+// username and password sent from form
+$names=$_POST['names'];
+$username=$_POST['username'];
+$password=$_POST['password'];
 $contact=$_POST['contact'];
 
 if($names == '' || $username =='' || $password==''){
@@ -17,7 +17,7 @@ exit;
 }
 
 
-$sql2 = "SELECT count(userid) as id FROM user";  
+$sql2 = "SELECT count(userid) as id FROM user";
 $result=mysqli_query($connection,$sql2);
 $row = mysqli_fetch_assoc($result);
 $userid = $row['id'];
@@ -45,7 +45,3 @@ mysqli_query($connection,$SQL);
 echo "<center><h4><a href='http://localhost/tissue/index.php'>Registration was successful. Click to Continue</a></h4></center>";
 }
 ?>
-
-	
-	
-

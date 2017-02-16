@@ -1,18 +1,18 @@
 <?php
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password=""; // Mysql password 
-$db_name="tissue"; // Database name 
-$tbl_name="user"; // Table name 
+$host="localhost"; // Host name
+$username="tissue"; // Mysql username
+$password="tissue"; // Mysql password 
+$db_name="tissue"; // Database name
+$tbl_name="user"; // Table name
 
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
+mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 
-// username and password sent from form 
-$names=$_POST['names']; 
-$username=$_POST['username']; 
-$password=$_POST['password']; 
+// username and password sent from form
+$names=$_POST['names'];
+$username=$_POST['username'];
+$password=$_POST['password'];
 $contact=$_POST['contact'];
 
 if($names == '' || $username =='' || $password==''){
@@ -49,7 +49,3 @@ $result = mysql_query($SQL);
 echo "<center><h4><a href='http://localhost/tissue/index.php'>Registration was successful. Click to Continue</a></h4></center>";
 }
 ?>
-
-	
-	
-

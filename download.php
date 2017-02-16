@@ -44,7 +44,7 @@ $userid = $_SESSION['userid'];
    </table>
 <br></br>
 
-<align = "centre"><img src=" http://localhost/tissue/images1/upload.jpg" align="centre" />
+<align = "centre"><img src="images1/upload.jpg" align="centre" />
  <br></br>
 
 <?php
