@@ -5,7 +5,7 @@ session_start();
 $userid = $_SESSION['userid'];
 $host="localhost"; // Host name
 $username="tissue"; // Mysql username
-$password=""; // Mysql password
+$password="tissue"; // Mysql password
 $db_name="tissue"; // Database name
 $tbl_name="user"; // Table name
 
@@ -60,7 +60,7 @@ $names = strtoupper(stripslashes($names));
 
 <div id="content">
 
-<align = "centre"><img src="images1/content.jpg" align="centre" />	
+<align = "centre"><img src="images1/content.jpg" align="centre" />
 </div> <!-- end #content -->
 <?php include('includes/footer.php'); ?>
 </div> <!-- End #wrapper -->
