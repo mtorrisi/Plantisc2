@@ -12,7 +12,7 @@ $password=$_POST['password'];
 $contact=$_POST['contact'];
 
 if($names == '' || $username =='' || $password==''){
-echo "<center><h4><a href='http://localhost/tissue/register.php'>Please Confirm Entries and Retry</a></h4></center>";
+echo "<center><h4><a href='/register.php'>Please Confirm Entries and Retry</a></h4></center>";
 exit;
 }
 
@@ -35,13 +35,13 @@ $count=mysqli_num_rows($result);
 
 if($count==1){
 // Register $myusername, $mypassword and redirect to file "login_success.php"
-echo "<center><h4><a href='http://localhost/tissue/register.php'>User already in existence, Try another</a></h4></center>";
+echo "<center><h4><a href='/register.php'>User already in existence, Try another</a></h4></center>";
 
 }
 else {
 $SQL = "INSERT INTO user (userid, names, username, password, contact) VALUES ('$userid','$names', '$username' , '$password', '$contact')";
 mysqli_query($connection,$SQL);
 
-echo "<center><h4><a href='http://localhost/tissue/index.php'>Registration was successful. Click to Continue</a></h4></center>";
+echo "<center><h4><a href='/index.php'>Registration was successful. Click to Continue</a></h4></center>";
 }
 ?>

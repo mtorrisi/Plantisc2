@@ -39,6 +39,6 @@ $_SESSION['userid'] = $userid;
 header("Location:homepage.php");
 }
 else {
-echo "<center><h4><a href='http://localhost/tissue/userlogin.php'>Wrong Password. Retry</a></h4></center>";
+echo "<center><h4><a href='/userlogin.php'>Wrong Password. Retry</a></h4></center>";
 }
 ?>
