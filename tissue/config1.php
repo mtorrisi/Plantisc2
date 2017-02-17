@@ -1,6 +1,6 @@
 <?php
 
-mysql_connect('plantisc', 'tissue', 'tissue');
+mysql_connect('localhost', 'tissue', 'tissue');
 mysql_select_db('tissue');
 
 $sql1 = mysql_query("CREATE TABLE `kinintype` (
