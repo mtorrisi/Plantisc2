@@ -1,5 +1,5 @@
 <?php
-$host="localhost"; // Host name
+$host="plantisc"; // Host name
 $username="tissue"; // Mysql username
 $password="tissue"; // Mysql password 
 $db_name="tissue"; // Database name
