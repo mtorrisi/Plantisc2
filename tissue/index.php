@@ -25,7 +25,7 @@
 <?php include('includes/header.php'); ?>
 <?php include('includes/nav.php');
 include('includes/sidepic1.php');
-$servername = "plantisc";
+$servername = "localhost";
 $username = "tissue";
 $password = "tissue";
 
