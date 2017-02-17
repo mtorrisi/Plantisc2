@@ -27,7 +27,7 @@ $userid = $_SESSION['userid'];
 		<div id="wrapper">
 
 <?php
-define('DB_SERVER', 'localhost');
+define('DB_SERVER', 'plantisc');
 define('DB_USERNAME', 'tissue');
 define('DB_PASSWORD', 'tissue');
 define('DB_DATABASE', 'tissue');
