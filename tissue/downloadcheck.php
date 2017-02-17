@@ -4,7 +4,7 @@ ini_set('display_errors', E_ALL);
 if (isset($_GET['fileid']))
  {
  $fileid = $_GET['fileid'];
-$DB_Server = "localhost"; // MySQL Server
+$DB_Server = "plantisc"; // MySQL Server
 $DB_Username = "tissue"; // MySQL Username
 $DB_Password = "tissue"; // MySQL Password
 $DB_DBName = "tissue"; // MySQL Database Name
