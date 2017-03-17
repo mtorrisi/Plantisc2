@@ -37,11 +37,13 @@ border-bottom:1px solid #ccc;
 display:inline;
 padding:10px;
 text-decoration:none;
-background-color:#f1f1f1;
+/*background-color:#f1f1f1;*/
+background-color:#4d6438;
 }
 
 #nav a:hover {
-background-color:#bababa;
+/*background-color:#bababa;*/
+background-color:#caca8e;
 height:80px;
 }
 

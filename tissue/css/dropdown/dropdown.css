@@ -55,7 +55,8 @@ ul.dropdown li:hover > ul {
 
 
 #nav {
-width:1040px;
+/*width:1040px;*/
+width:auto;
 height:20px;
 border-bottom:1px solid #ccc;
 }
