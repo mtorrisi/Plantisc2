@@ -25,6 +25,15 @@
 <?php include('includes/header.php'); ?>
 <?php include('includes/nav.php');
 include('includes/sidepic1.php');
+
+if (isset($_GET['logout'])) {
+	if ($_GET['logout']) {
+		session_unset();
+		session_destroy();
+		header("location:/Shibboleth.sso/Logout");
+	}
+}
+
 $servername = "localhost";
 $username = "tissue";
 $password = "tissue";
@@ -50,7 +59,11 @@ include('config1.php');
 $conn->close();
 
 ?>
+<?php
 
+	
+
+?>
 
 
 <div id="content">

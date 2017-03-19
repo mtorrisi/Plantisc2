@@ -2,7 +2,7 @@
 session_start();
 ?>
 <?php
-$userid = $_SESSION['userid'];
+/*$userid = $_SESSION['userid'];
 $host="localhost"; // Host name
 $username="tissue"; // Mysql username
 $password="tissue"; // Mysql password
@@ -15,8 +15,9 @@ mysql_select_db("$db_name")or die("cannot select DB");
 $sql="SELECT names FROM $tbl_name WHERE userid='$userid'";
 $result=mysql_query($sql);
 $row = mysql_fetch_assoc($result);
-$names = $row['names'];
-$names = strtoupper(stripslashes($names));
+$names = $row['names'];*/
+$names = $_SESSION['name']
+//$names = strtoupper(stripslashes($names));
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 

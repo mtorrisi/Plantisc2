@@ -2,7 +2,7 @@
 session_start();
 ?>
 <?php
-define('DB_SERVER', 'localhost');
+/*define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'tissue');
 define('DB_PASSWORD', 'tissue');
 define('DB_DATABASE', 'tissue');
@@ -25,12 +25,35 @@ while($rows=mysqli_fetch_array($result))
 $count=mysqli_num_rows($result);
 
 // If result matched $myusername and $mypassword, table row must be 1 row
-if($count==1){
+*/
+
+function getName() {
+	if (array_key_exists("displayName", $_SERVER)) {
+		return implode(" ", explode(";", $_SERVER["displayName"]));
+	} else if (array_key_exists("cn", $_SERVER)) {
+		return implode(" ", explode(";", $_SERVER["cn"]));
+	} else if (array_key_exists("givenName", $_SERVER) && array_key_exists("sn", $_SERVER)) {
+		return implode(" ", explode(";", $_SERVER["givenName"])) . " " .implode(" ", explode(";", $_SERVER["sn"]));
+	}
+	return "";
+}
+
+function IsNullOrEmptyString($str){
+    return (!isset($str) || trim($str)==='');
+}
+
+$username = $_SERVER["REMOTE_USER"];
+$name = getName();
+
+print $name;
+//if($count==1){
+if(!IsNullOrEmptyString($name)){
 // Register $myusername, $mypassword and redirect to file "login_success.php"
-$_SESSION['userid'] = $userid;
-header("Location:homepage.php");
+	//$_SESSION['userid'] = $userid;
+	$_SESSION['name'] = $name;
+	header("Location:homepage.php");
 }
 else {
-echo "<center><h4><a href='/userlogin.php'>Wrong Password. Retry</a></h4></center>";
+	echo "<center><h4><a href='/userlogin.php'>Wrong Password. Retry</a></h4></center>";
 }
 ?>

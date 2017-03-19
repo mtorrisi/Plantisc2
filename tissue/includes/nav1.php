@@ -10,8 +10,6 @@
 	<li><a class="" href="/simulate.php">Simulate</a> </li>
 		<li><a class="" href="/print.php">Print Result</a> </li>
 		<li><a class="" href="/export.php">Export Data</a> </li>
-		<li><a class="" href="/index.php">Logout</a> </li>
+		<li><a class="" href="/index.php?logout=true">Logout</a> </li>
 	
 </div> <!-- end #nav -->
-
-
