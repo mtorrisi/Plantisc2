@@ -16,8 +16,14 @@ $sql="SELECT names FROM $tbl_name WHERE userid='$userid'";
 $result=mysql_query($sql);
 $row = mysql_fetch_assoc($result);
 $names = $row['names'];*/
-$names = $_SESSION['name']
+$names = "";
+$names = $_SESSION['name'];
 //$names = strtoupper(stripslashes($names));
+
+function IsNullOrEmptyString($str){
+    return (!isset($str) || trim($str)==='');
+}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -40,10 +46,10 @@ $names = $_SESSION['name']
 </head>
 
 	<body>
-
 <div id="wrapper">
 
 <?php include('includes/header.php'); ?>
+<?php if(!IsNullOrEmptyString($names)) : { ?>
 <?php include('includes/nav1.php'); ?>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="330033">
       <tr>
@@ -58,13 +64,19 @@ $names = $_SESSION['name']
 	</tr>
 
    </table>
-
 <div id="content">
 
 <align = "centre"><img src="images1/content.jpg" align="centre" />
 </div> <!-- end #content -->
 <?php include('includes/footer.php'); ?>
+<?php }; else : { ?>
+<?php include('includes/nav.php'); ?>
+<div id="content1">
+	<align = "centre"><p>Please login before acces this page.<p/>
+</div>
+<?php }; endif; ?>
 </div> <!-- End #wrapper -->
+
 </body>
 
 </html>

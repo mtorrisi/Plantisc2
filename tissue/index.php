@@ -26,14 +26,6 @@
 <?php include('includes/nav.php');
 include('includes/sidepic1.php');
 
-if (isset($_GET['logout'])) {
-	if ($_GET['logout']) {
-		session_unset();
-		session_destroy();
-		header("location:/Shibboleth.sso/Logout");
-	}
-}
-
 $servername = "localhost";
 $username = "tissue";
 $password = "tissue";
